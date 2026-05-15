@@ -28,19 +28,19 @@ export default function Navbar() {
               E
             </div>
             <div>
-              <span className="font-bold text-2xl tracking-tight">ElectroCAD</span>
-              <p className="text-xs text-gray-500 -mt-1">ENGINEERING</p>
+              <span className="font-bold text-2xl tracking-tight text-neutral-900 dark:text-white">ElectroCAD</span>
+              <p className="text-xs text-gray-500 dark:text-gray-400 -mt-1">ENGINEERING</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 text-neutral-700 dark:text-neutral-300">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={`font-medium hover:text-accent transition-colors ${
-                  location.pathname === link.path ? 'text-accent' : ''
+                  location.pathname === link.path ? 'text-accent font-semibold' : ''
                 }`}
               >
                 {link.name}
@@ -50,27 +50,25 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-3 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="p-3 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300"
+              title="Toggle Theme"
             >
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
 
-            {/* WhatsApp Button */}
             <a
               href="https://wa.me/255XXXXXXXXX"
               target="_blank"
-              className="hidden md:flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-xl font-medium hover:bg-green-700 transition-colors"
+              className="hidden md:flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors"
             >
               WhatsApp
             </a>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-3"
+              className="md:hidden p-3 text-neutral-700 dark:text-neutral-300"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -80,14 +78,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-neutral-950 border-t">
+        <div className="md:hidden bg-white dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800">
           <div className="flex flex-col py-6 px-6 space-y-6 text-lg">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-accent transition-colors"
+                className="text-neutral-700 dark:text-neutral-300 hover:text-accent transition-colors"
               >
                 {link.name}
               </Link>

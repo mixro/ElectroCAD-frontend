@@ -1,5 +1,5 @@
 import { Sun, Moon, MessageCircle } from 'lucide-react';
-import './Hero.css';
+import './hero.css';
 import { useTheme } from '../../context/ThemeContext';
 
 export default function Hero() {
