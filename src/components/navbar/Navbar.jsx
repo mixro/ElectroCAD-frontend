@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { BrightnessHigh, DarkMode }from '@mui/icons-material';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,15 +19,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-neutral-950/95 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center text-black font-bold text-2xl">
-              E
-            </div>
             <div>
               <span className="font-bold text-2xl tracking-tight text-neutral-900 dark:text-white">ElectroCAD</span>
               <p className="text-xs text-gray-500 dark:text-gray-400 -mt-1">ENGINEERING</p>
@@ -34,13 +32,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 text-neutral-700 dark:text-neutral-300">
+          <div className="hidden text-xl md:flex items-center gap-8 text-neutral-700 dark:text-neutral-300">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium hover:text-accent transition-colors ${
-                  location.pathname === link.path ? 'text-accent font-semibold' : ''
+                className={`font-medium hover:text-accent-black transition-colors ${
+                  location.pathname === link.path ? 'text-accent-black font-semibold' : ''
                 }`}
               >
                 {link.name}
@@ -55,7 +53,10 @@ export default function Navbar() {
               className="p-3 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300"
               title="Toggle Theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {theme === 'light' 
+                ? <DarkMode sx={{ fontSize: 27 }} />
+                : <BrightnessHigh sx={{ fontSize: 27 }} />
+              }
             </button>
 
             <a
