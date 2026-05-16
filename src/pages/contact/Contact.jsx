@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 import { useState } from 'react';
-import { Mail, Phone, Clock, MessageCircle } from 'lucide-react';
+import { Mail, Phone, Clock } from 'lucide-react';
+import { WhatsApp } from '@mui/icons-material';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -156,24 +157,24 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-8">Quick Contact</h3>
             
             <div className="space-y-6">
-              <a href="https://wa.me/255XXXXXXXXX" target="_blank" className="flex items-center gap-4 group">
+              <a href="https://wa.me/255622739599" target="_blank" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600">
-                  <MessageCircle size={28} />
+                  <WhatsApp sx={{fontSize: 36}} />
                 </div>
                 <div>
                   <p className="font-medium text-lg">WhatsApp</p>
-                  <p className="text-green-600">+255 XXX XXX XXX</p>
+                  <p className="text-green-600">+255 622 739 599</p>
                   <p className="text-sm text-gray-500">Fastest way to reach us</p>
                 </div>
               </a>
 
-              <a href="tel:+255XXXXXXXXX" className="flex items-center gap-4 group">
+              <a href="tel:+255622739599" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600">
                   <Phone size={28} />
                 </div>
                 <div>
                   <p className="font-medium text-lg">Call Us</p>
-                  <p className="text-blue-600">+255 XXX XXX XXX</p>
+                  <p className="text-blue-600">+255 622 739 599</p>
                 </div>
               </a>
 

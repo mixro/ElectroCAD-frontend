@@ -28,35 +28,72 @@ export default function Footer() {
             <h4 className="font-semibold mb-6 text-lg">Quick Links</h4>
             <div className="space-y-3">
               <Link to="/" className="block text-gray-400 hover:text-white">Home</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white">Our Services</Link>
               <Link to="/works" className="block text-gray-400 hover:text-white">Our Projects</Link>
+              <Link to="/contact" className="block text-gray-400 hover:text-white">Contact Us</Link>
               <Link to="/about" className="block text-gray-400 hover:text-white">About Us</Link>
-              <Link to="/team" className="block text-gray-400 hover:text-white">Our Team</Link>
             </div>
           </div>
 
           {/* Services */}
-          <div>
+         <div>
             <h4 className="font-semibold mb-6 text-lg">Services</h4>
             <div className="space-y-3 text-gray-400">
-              <p>Electrical CAD Drafting</p>
-              <p>Building Electrical Design</p>
-              <p>Industrial Documentation</p>
-              <p>Solar PV System Design</p>
-              <p>Engineering Consultancy</p>
+              <Link 
+                to="/service/electrical-cad-drafting" 
+                className="hover:text-white transition-colors block"
+              >
+                Electrical CAD Drafting
+              </Link>
+              
+              <Link 
+                to="/service/building-electrical-design" 
+                className="hover:text-white transition-colors block"
+              >
+                Building Electrical Design
+              </Link>
+              
+              <Link 
+                to="/service/industrial-documentation" 
+                className="hover:text-white transition-colors block"
+              >
+                Industrial Documentation
+              </Link>
+              
+              <Link 
+                to="/service/solar-renewable-energy" 
+                className="hover:text-white transition-colors block"
+              >
+                Solar PV System Design
+              </Link>
+              
+              <Link 
+                to="/service/technical-redrawing" 
+                className="hover:text-white transition-colors block"
+              >
+                Technical Redrawing
+              </Link>
+              
+              <Link 
+                to="/service/engineering-consultancy" 
+                className="hover:text-white transition-colors block"
+              >
+                Engineering Consultancy
+              </Link>
             </div>
           </div>
-
+          
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-6 text-lg">Contact Us</h4>
             <div className="space-y-3 text-gray-400">
               <p>Dar es Salaam, Tanzania</p>
-              <p>+255 XXX XXX XXX</p>
+              <p>+255 622 739 599</p>
               <p>info@electrocad.co.tz</p>
             </div>
             
             <a 
-              href="https://wa.me/255XXXXXXXXX" 
+              href="https://wa.me/255622739599" 
               target="_blank"
               className="mt-6 inline-block bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl text-sm font-medium"
             >

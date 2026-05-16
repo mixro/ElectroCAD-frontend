@@ -64,7 +64,7 @@ export default function Hero() {
 
           <button 
             className="btn-secondary"
-            onClick={() => window.open('https://wa.me/255XXXXXXXXX', '_blank')}
+            onClick={() => window.open('https://wa.me/255622739599', '_blank')}
           >
             <MessageCircle size={24} />
             Chat on WhatsApp

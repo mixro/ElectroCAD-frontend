@@ -1,7 +1,10 @@
 // src/sections/FinalCTA.jsx
 import { MessageCircle, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function FinalCTA() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 px-6 bg-gradient-to-br from-primary via-primary-dark to-neutral-950 text-white relative overflow-hidden">
       {/* Background Accent Grid */}
@@ -21,9 +24,7 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
           {/* Primary CTA - Request Service */}
           <button 
-            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ 
-              behavior: 'smooth' 
-            })}
+            onClick={() => navigate("/services")}
             className="group w-full sm:w-auto px-10 py-4 sm:py-4 bg-accent hover:bg-[#00b8e0] text-black font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105 shadow-lg"
           >
             Request a Service Now
@@ -32,7 +33,7 @@ export default function FinalCTA() {
 
           {/* Secondary CTA - WhatsApp */}
           <button 
-            onClick={() => window.open('https://wa.me/255XXXXXXXXX', '_blank')}
+            onClick={() => window.open('https://wa.me/255622739599', '_blank')}
             className="w-full sm:w-auto px-10 py-4 sm:py-4 border-2 border-white/70 hover:border-accent hover:text-accent font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105"
           >
             <MessageCircle size={26} />

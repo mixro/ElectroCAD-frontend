@@ -61,7 +61,7 @@ export default function Navbar() {
             </button>
 
             <a
-              href="https://wa.me/255XXXXXXXXX"
+              href="https://wa.me/255622739599"
               target="_blank"
               className="hidden md:flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors"
             >
@@ -93,7 +93,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/255XXXXXXXXX"
+              href="https://wa.me/255622739599"
               target="_blank"
               className="bg-green-600 text-white py-4 text-center rounded-2xl font-medium"
             >
