@@ -2,14 +2,22 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { servicesData } from '../../data/services';
+import { useState } from 'react';
+import ServiceRequestModal from '../../components/serviceRequestModal/ServiceRequestModal';
 
 export default function ServiceDetail() {
-  const { slug } = useParams();
-  const service = servicesData.find(s => s.slug === slug);
+    const { slug } = useParams();
+    const service = servicesData.find(s => s.slug === slug);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (!service) {
-    return <div className="pt-32 text-center">Service not found</div>;
-  }
+    if (!service) {
+        return (
+        <div className="pt-32 pb-20 text-center">
+            <h2 className="text-3xl font-bold">Service not found</h2>
+            <Link to="/services" className="text-accent mt-4 inline-block">← Back to Services</Link>
+        </div>
+        );
+    }
 
   return (
     <div className="pt-24 pb-20 px-6 max-w-6xl mx-auto">
@@ -62,12 +70,26 @@ export default function ServiceDetail() {
               </div>
             </div>
 
-            <button className="w-full mt-10 bg-accent hover:bg-[#00b8e0] text-black font-semibold py-4 rounded-2xl text-lg transition-all">
+            <button 
+                onClick={() => setIsModalOpen(true)}
+                className="w-full mt-10 bg-accent hover:bg-[#00b8e0] text-black font-semibold py-4 rounded-2xl text-lg transition-all"
+            >
               Request This Service
             </button>
+
+            <p className="text-center text-sm text-gray-500 mt-4">
+              You will be redirected to WhatsApp after filling the form
+            </p>
           </div>
         </div>
       </div>
+
+        {/* Service Request Modal */}
+        <ServiceRequestModal 
+            isOpen={isModalOpen} 
+            onClose={() => setIsModalOpen(false)} 
+            defaultService={service.title}
+        />
     </div>
   );
 }

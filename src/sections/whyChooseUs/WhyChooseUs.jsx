@@ -11,27 +11,27 @@ import {
 const advantages = [
   {
     title: "Technical Precision & Accuracy",
-    icon: <PrecisionManufacturing sx={{ fontSize: 48 }} />
+    icon: <PrecisionManufacturing sx={{ fontSize: { xs: 36, sm: 48 } }} />
   },
   {
     title: "Full IEC & IEEE Standards Compliance",
-    icon: <Verified sx={{ fontSize: 48 }} />
+    icon: <Verified sx={{ fontSize: { xs: 36, sm: 48 } }} />
   },
   {
     title: "Advanced Software (AutoCAD, EPLAN, ETAP, Revit)",
-    icon: <Code sx={{ fontSize: 48 }} />
+    icon: <Code sx={{ fontSize: { xs: 36, sm: 48 } }} />
   },
   {
     title: "Fast Project Delivery",
-    icon: <Speed sx={{ fontSize: 48 }} />
+    icon: <Speed sx={{ fontSize: { xs: 36, sm: 48 } }} />
   },
   {
     title: "Industry Experienced Engineers",
-    icon: <Engineering sx={{ fontSize: 48 }} />
+    icon: <Engineering sx={{ fontSize: { xs: 36, sm: 48 } }} />
   },
   {
     title: "Client-Centered Solutions",
-    icon: <SupportAgent sx={{ fontSize: 48 }} />
+    icon: <SupportAgent sx={{ fontSize: { xs: 36, sm: 48 } }} />
   }
 ];
 
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           {advantages.map((item, i) => (
             <div
               key={i}
-              className="group bg-white dark:bg-neutral-900 p-8 rounded-3xl shadow-sm hover:shadow-xl 
+              className="group bg-white dark:bg-neutral-900 p-4 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl 
                          border border-neutral-100 dark:border-neutral-800 
                          transition-all duration-300 hover:-translate-y-2"
             >

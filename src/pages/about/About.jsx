@@ -47,7 +47,7 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 px-6 bg-neutral-100 dark:bg-neutral-900">
+      <section className="py-20 px-6 bg-neutral-200 dark:bg-neutral-900">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
           <div className="bg-white dark:bg-neutral-800 p-10 rounded-3xl shadow-sm">
             <div className="flex items-center gap-4 mb-6">
