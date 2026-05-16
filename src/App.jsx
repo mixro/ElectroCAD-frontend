@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import { ThemeProvider } from './context/ThemeContext'
 import About from './pages/about/About'
-import Contact from './pages/contant/Contant'
+import Contact from './pages/contact/Contact'
 import Home from './pages/home/Home'
 import Team from './pages/team/Team'
 import Works from './pages/works/Works'
@@ -18,7 +18,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
+        <div className="min-h-screen bg-neutral-100 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
           <Navbar />
           
           <Routes>
@@ -30,7 +30,7 @@ function App() {
             <Route path="/service/:slug" element={<ServiceDetail />} />
 
             <Route path="/about" element={<About />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/eteam" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
 

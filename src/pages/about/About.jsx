@@ -96,7 +96,7 @@ export default function About() {
             ].map((value, i) => (
               <div 
                 key={i} 
-                className="group bg-white dark:bg-neutral-900 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-800 hover:border-accent transition-all hover:shadow-xl"
+                className="group bg-white dark:bg-neutral-900 p-8 rounded-3xl border border-neutral-300 dark:border-neutral-800 hover:border-accent transition-all hover:shadow-xl"
               >
                 <div className="text-accent mb-5">
                   <Users size={42} />

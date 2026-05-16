@@ -4,7 +4,7 @@ import { servicesData } from '../../data/services';
 
 export default function Services() {
   return (
-    <div className="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+    <div className="pt-30 pb-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-4">
           Our Services
