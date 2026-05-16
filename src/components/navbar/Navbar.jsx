@@ -25,10 +25,19 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2">
             <div>
-              <span className="font-bold text-2xl tracking-tight text-neutral-900 dark:text-white">ElectroCAD</span>
-              <p className="text-xs text-gray-500 dark:text-gray-400 -mt-1">ENGINEERING</p>
+              <img 
+                src="/full-logo-black.png" 
+                alt="EC" 
+                className="h-14 sm:h-16 block dark:hidden"
+              />
+
+              <img 
+                src="/full-logo-white.png" 
+                alt="EC" 
+                className="h-14 sm:h-16  hidden dark:block"
+              />
             </div>
           </Link>
 
