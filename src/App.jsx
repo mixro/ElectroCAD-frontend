@@ -11,6 +11,8 @@ import Home from './pages/home/Home'
 import Team from './pages/team/Team'
 import Works from './pages/works/Works'
 import ProjectDetail from './pages/projectDetails/ProjectDetails';
+import Services from './pages/services/Services';
+import ServiceDetail from './pages/serviceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/works" element={<Works />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
+
+            <Route path="/services" element={<Services />} />
+            <Route path="/service/:slug" element={<ServiceDetail />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />

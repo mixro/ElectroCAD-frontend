@@ -1,30 +1,6 @@
-// src/sections/FeaturedProjects.jsx
-const projects = [
-  {
-    title: "Commercial Complex",
-    location: "Dar es Salaam, Tanzania",
-    image: "https://5.imimg.com/data5/WF/PS/MY-8064807/commercial-complex.jpg",
-    category: "Commercial"
-  },
-  {
-    title: "Industrial Plant",
-    location: "Dar es Salaam, Tanzania",
-    image: "https://butterflymx.com/wp-content/uploads/2024/07/industrial-facilities.jpg?_t=1721223841",
-    category: "Industrial"
-  },
-  {
-    title: "Solar PV Farm",
-    location: "Coast Region, Tanzania",
-    image: "https://solex.in/wp-content/uploads/2024/12/What-are-the-Types-of-Solar-Power-Plants.webp",
-    category: "Renewable Energy"
-  },
-  {
-    title: "Luxury Residential Villa",
-    location: "Dar es Salaam, Tanzania",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
-    category: "Residential"
-  }
-];
+import { Link } from "react-router-dom";
+import { projectsData } from "../../data/projects";
+
 
 export default function FeaturedProjects() {
   return (
@@ -49,7 +25,7 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {projects.map((project, i) => (
+          {projectsData.slice(0, 4).map((project, i) => (
             <div 
               key={i} 
               className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl 
@@ -73,13 +49,22 @@ export default function FeaturedProjects() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 pb-3">
                 <h3 className="font-semibold text-xl text-neutral-900 dark:text-white mb-1">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {project.location}
                 </p>
+              </div>
+
+              <div className="px-6 pb-4">
+                <Link 
+                  to={`/project/${project.id}`}
+                  className="text-accent font-bold flex items-center gap-2 hover:gap-3 transition-all group-hover:text-accent-hover"
+                >
+                  <p>View →</p>
+                </Link>
               </div>
             </div>
           ))}
