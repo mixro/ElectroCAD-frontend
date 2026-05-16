@@ -9,12 +9,16 @@
   --color-primary-dark: #05121F;
   
   --color-accent: #00D4FF;
-    --color-accent-black: #00b7db;
+  --color-accent-black: #00b7db;
   --color-accent-light: #40E0FF;
 
   --color-neutral-50: #F8FAFC;
   --color-neutral-900: #0F172A;
   --color-neutral-950: #020617;
+  --color-neutral-1000: #0c2955;
+
+  --color-yellow: #fcc71b;
+  --color-yellow-dark: #ffa600;
 
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -26,12 +30,14 @@
   --color-primary-dark: #05121F;
   
   --color-accent: #00b7db;
-  --color-accentBlack: #f81010;
+  --color-accentBlack: #0c2955;
   --color-accent-light: #40E0FF;
+
+  --color-yellow: #ffa600;
 
   --color-neutral-50: #F8FAFC;
   --color-neutral-900: #0F172A;
-  --color-neutral-950: #020617;
+  --color-neutral-950: #0b1f35;
 
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Inter", sans-serif;

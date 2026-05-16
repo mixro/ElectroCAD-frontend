@@ -9,7 +9,7 @@ export default function FinalCTA() {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-          Ready to Start Your Next<br />
+          Ready to Start Your Next <br className="hidden md:inline" />
           Electrical Engineering Project?
         </h2>
 
@@ -24,7 +24,7 @@ export default function FinalCTA() {
             onClick={() => document.getElementById('contact-form')?.scrollIntoView({ 
               behavior: 'smooth' 
             })}
-            className="group px-10 py-5 bg-accent hover:bg-[#00b8e0] text-black font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105 shadow-lg"
+            className="group w-full sm:w-auto px-10 py-4 sm:py-4 bg-accent hover:bg-[#00b8e0] text-black font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105 shadow-lg"
           >
             Request a Service Now
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -33,7 +33,7 @@ export default function FinalCTA() {
           {/* Secondary CTA - WhatsApp */}
           <button 
             onClick={() => window.open('https://wa.me/255XXXXXXXXX', '_blank')}
-            className="px-10 py-5 border-2 border-white/70 hover:border-accent hover:text-accent font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105"
+            className="w-full sm:w-auto px-10 py-4 sm:py-4 border-2 border-white/70 hover:border-accent hover:text-accent font-semibold text-lg rounded-2xl flex items-center gap-3 transition-all hover:scale-105"
           >
             <MessageCircle size={26} />
             Chat on WhatsApp

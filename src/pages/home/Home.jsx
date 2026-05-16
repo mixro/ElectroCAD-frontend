@@ -1,5 +1,5 @@
 import FeaturedProjects from "../../sections/featuredProjects/FeaturedProjects";
-import FinalCTA from "../../sections/finalCTA/FInalCTA";
+import FinalCTA from "../../sections/finalCTA/FinalCTA";
 import Hero from "../../sections/hero/Hero";
 import Services from "../../sections/services/Services";
 import Testimonials from "../../sections/testimonials/Testimonials";
