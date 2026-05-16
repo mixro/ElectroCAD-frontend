@@ -26,17 +26,21 @@ export default function Services() {
                          transition-all duration-500 hover:-translate-y-3"
             >
               {/* Image Area */}
-              <div className={`h-52 relative overflow-hidden bg-gradient-to-br ${service.color}`}>
+              <div className={`h-52 relative overflow-hidden bg-gradient-to-br ${service.color} border-b border-neutral-300 dark:border-neutral-700`}>
                 
                 {/* Background Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent z-10" />
                 
-                {/* Service Image */}
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <Link 
+                  to={`/service/${service.slug}`}
+                  className="relative block w-full h-full z-30 cursor-pointer"
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </Link>
 
                 {/* Subtle Grid Pattern Overlay */}
                 <div className="absolute inset-0 bg-[linear-gradient(#ffffff15_1px,transparent_1px),linear-gradient(90deg,#ffffff15_1px,transparent_1px)] bg-[size:30px_30px] z-20" />

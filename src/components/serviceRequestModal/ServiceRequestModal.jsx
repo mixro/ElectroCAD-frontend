@@ -16,12 +16,12 @@ export default function ServiceRequestModal({ isOpen, onClose, defaultService = 
     e.preventDefault();
 
     const message = `*New Service Request from Website*%0A%0A` +
-      `👤 Name: ${formData.name}%0A` +
-      `📞 Phone: ${formData.phone}%0A` +
-      `✉️ Email: ${formData.email}%0A` +
-      `🛠 Service: ${formData.service}%0A` +
-      `📅 Deadline: ${formData.deadline || "Not specified"}%0A%0A` +
-      `📋 Project Description:%0A${formData.description}`;
+      `Name: ${formData.name}%0A` +
+      `Phone: ${formData.phone}%0A` +
+      `Email: ${formData.email}%0A` +
+      `Service: ${formData.service}%0A` +
+      `Deadline: ${formData.deadline || "Not specified"}%0A%0A` +
+      `Project Description:%0A${formData.description}`;
 
     const whatsappNumber = "255622739599"; // ← Replace with your number
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;

@@ -18,17 +18,22 @@ export default function Services() {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-neutral-100 dark:border-neutral-800 transition-all duration-500 hover:-translate-y-2"
+            className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-neutral-200 dark:border-neutral-800 transition-all duration-500 hover:-translate-y-2"
           >
-            <div className="relative h-64 overflow-hidden">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
+            <div className="relative h-64 overflow-hidden border-b border-neutral-300 dark:border-neutral-700">
+              <Link 
+                to={`/service/${service.slug}`}
+                className="relative block w-full h-full z-30 cursor-pointer"
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </Link>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               
-              <div className="absolute top-6 left-6 bg-white/90 dark:bg-black/70 text-xs font-semibold px-4 py-1.5 rounded-full">
+              <div className="absolute top-6 left-6 bg-white/90 dark:bg-black/70 text-xs font-semibold px-4 py-1.5 rounded-full z-50">
                 {service.category}
               </div>
             </div>

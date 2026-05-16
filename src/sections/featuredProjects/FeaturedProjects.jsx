@@ -33,17 +33,22 @@ export default function FeaturedProjects() {
             >
               {/* Project Image */}
               <div className="relative h-56 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <Link 
+                  to={`/project/${project.id}`}
+                  className="relative block w-full h-full z-30"
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </Link>
                 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/70 text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm">
+                <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/70 text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm z-50">
                   {project.category}
                 </div>
               </div>

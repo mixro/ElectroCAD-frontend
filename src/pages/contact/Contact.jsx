@@ -1,7 +1,45 @@
 // src/pages/Contact.jsx
+import { useState } from 'react';
 import { Mail, Phone, Clock, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    company: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const whatsappMessage = `*New Inquiry from Website*%0A%0A` +
+      `Name: ${formData.fullName}%0A` +
+      `Company: ${formData.company || "Not provided"}%0A` +
+      `Email: ${formData.email}%0A` +
+      `Phone: ${formData.phone}%0A` +
+      `Service: ${formData.service || "General Inquiry"}%0A%0A` +
+      `Message:%0A${formData.message}`;
+
+    const whatsappNumber = "255622739599"; // ← Replace with your actual number
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+
+    // Optional: Reset form after sending
+    setFormData({
+      fullName: "", company: "", email: "", phone: "", service: "", message: ""
+    });
+  };
+
   return (
     <div className="pt-30 pb-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
@@ -15,15 +53,19 @@ export default function Contact() {
 
       <div className="grid lg:grid-cols-12 gap-12">
         {/* Contact Form */}
-        <div className="lg:col-span-7 bg-white dark:bg-neutral-900 rounded-3xl shadow-xl p-8 md:p-12">
-          <h2 className="text-3xl font-semibold mb-8">Send Us a Message</h2>
+        <div className="lg:col-span-7 bg-white dark:bg-neutral-900 rounded-3xl shadow-xl p-4 md:p-12">
+          <h2 className="text-2xl pt-4 sm:text-3xl font-semibold mb-8">Send Us a Message</h2>
           
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Full Name</label>
+                <label className="block text-sm font-medium mb-2">Full Name *</label>
                 <input
                   type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
                   className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors"
                   placeholder="John Doe"
                 />
@@ -32,6 +74,9 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-2">Company</label>
                 <input
                   type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors"
                   placeholder="Your Company Ltd"
                 />
@@ -43,14 +88,21 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-2">Email Address</label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors"
                   placeholder="you@example.com"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Phone Number</label>
+                <label className="block text-sm font-medium mb-2">Phone Number *</label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                   className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors"
                   placeholder="+255 XXX XXX XXX"
                 />
@@ -59,8 +111,13 @@ export default function Contact() {
 
             <div>
               <label className="block text-sm font-medium mb-2">Service Interested In</label>
-              <select className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors">
-                <option value="">Select a Service</option>
+              <select 
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full px-5 py-4 rounded-2xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors"
+              >
+                <option value="">Select a Service (Optional)</option>
                 <option>Electrical CAD Drafting</option>
                 <option>Building Electrical Design</option>
                 <option>Solar & Renewable Energy</option>
@@ -71,8 +128,12 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Project Description</label>
+              <label className="block text-sm font-medium mb-2">Project Description / Message *</label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 rows={6}
                 className="w-full px-5 py-4 rounded-3xl border border-neutral-400 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:border-accent transition-colors resize-y"
                 placeholder="Tell us about your project..."
@@ -83,7 +144,7 @@ export default function Contact() {
               type="submit"
               className="w-full bg-accent hover:bg-[#00b8e0] text-black cursor-pointer font-semibold py-5 rounded-2xl text-lg transition-all duration-300 hover:scale-[1.02]"
             >
-              Send Message
+              Send Message via WhatsApp
             </button>
           </form>
         </div>
@@ -133,14 +194,6 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-8">Info</h3>
             
             <div className="space-y-6">
-              {/* <div className="flex gap-4">
-                <MapPin className="text-accent mt-1" size={26} />
-                <div>
-                  <p className="font-medium">Dar es Salaam, Tanzania</p>
-                  <p className="text-gray-600 dark:text-gray-400">Plot No. 123, Mikocheni Area</p>
-                </div>
-              </div> */}
-
               <div className="flex gap-4">
                 <Clock className="text-accent mt-1" size={26} />
                 <div>
@@ -149,11 +202,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Google Map Placeholder */}
-            {/* <div className="mt-10 h-64 bg-neutral-200 dark:bg-neutral-800 rounded-2xl flex items-center justify-center border border-dashed border-neutral-300 dark:border-neutral-700">
-              <p className="text-gray-500">Google Map Embed Here</p>
-            </div> */}
           </div>
         </div>
       </div>
