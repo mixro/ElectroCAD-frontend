@@ -4,6 +4,7 @@ import { Mail, Phone, Clock } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 
 export default function Contact() {
+  const defaultMessage = "Hello ElexCAD Engineering,%0A%0AI visited your website and I'm interested in your services.%0APlease assist me.";
   const [formData, setFormData] = useState({
     fullName: "",
     company: "",
@@ -157,7 +158,10 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-8">Quick Contact</h3>
             
             <div className="space-y-6">
-              <a href="https://wa.me/255622739599" target="_blank" className="flex items-center gap-4 group">
+              <a 
+                href={`https://wa.me/255622739599?text=${defaultMessage}`}
+                target="_blank" className="flex items-center gap-4 group"
+              >
                 <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600">
                   <WhatsApp sx={{fontSize: 36}} />
                 </div>

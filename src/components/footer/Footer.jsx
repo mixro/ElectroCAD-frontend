@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const defaultMessage = "Hello ElexCAD Engineering,%0A%0AI visited your website and I'm interested in your services.%0APlease assist me.";
+
   return (
     <footer className="bg-neutral-950 text-white pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-6">
@@ -91,7 +93,7 @@ export default function Footer() {
             </div>
             
             <a 
-              href="https://wa.me/255622739599" 
+              href={`https://wa.me/255622739599?text=${defaultMessage}`} 
               target="_blank"
               className="mt-6 inline-block bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl text-sm font-medium"
             >

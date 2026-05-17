@@ -9,6 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const defaultMessage = "Hello ElexCAD Engineering,%0A%0AI visited your website and I'm interested in your services.%0APlease assist me.";
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -70,7 +71,7 @@ export default function Navbar() {
             </button>
 
             <a
-              href="https://wa.me/255622739599"
+              href={`https://wa.me/255622739599?text=${defaultMessage}`}
               target="_blank"
               className="hidden md:flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors"
             >
@@ -102,7 +103,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/255622739599"
+              href={`https://wa.me/255622739599?text=${defaultMessage}`}
               target="_blank"
               className="bg-green-600 text-white py-4 text-center rounded-2xl font-medium"
             >
