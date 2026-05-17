@@ -7,7 +7,7 @@ const testimonials = [
     name: "Eng. Sarah Mwandu",
     position: "Project Manager",
     company: "Elite Construction Ltd",
-    text: "ElectroCAD Engineering delivered highly precise electrical drawings for our 5-storey commercial building. Their attention to detail and compliance with standards helped us complete the project ahead of schedule.",
+    text: "ElexCAD Engineering delivered highly precise electrical drawings for our 5-storey commercial building. Their attention to detail and compliance with standards helped us complete the project ahead of schedule.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
   },
   {

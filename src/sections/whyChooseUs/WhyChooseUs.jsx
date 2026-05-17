@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
     <section className="py-20 px-6 bg-neutral-200 dark:bg-neutral-1000">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-neutral-900 dark:text-white">
-          Why Choose ElectroCAD Engineering?
+          Why Choose ElexCAD Engineering?
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

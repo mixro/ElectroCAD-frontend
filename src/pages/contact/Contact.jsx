@@ -178,13 +178,13 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a href="mailto:info@electrocad.co.tz" className="flex items-center gap-4 group">
+              <a href="mailto:info@elexcad.co.tz" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600">
                   <Mail size={28} />
                 </div>
                 <div>
                   <p className="font-medium text-lg">Email Us</p>
-                  <p className="text-purple-600">info@electrocad.co.tz</p>
+                  <p className="text-purple-600">info@elexcad.co.tz</p>
                 </div>
               </a>
             </div>

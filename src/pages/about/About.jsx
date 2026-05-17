@@ -1,5 +1,6 @@
 // src/pages/About.jsx
-import { Target, Eye, Award, Users } from 'lucide-react';
+import { Engineering, HandshakeOutlined, LightbulbOutlined, ShieldOutlined, VerifiedUserOutlined } from '@mui/icons-material';
+import { Target, Eye, Award, Gavel } from 'lucide-react';
 
 export default function About() {
   return (
@@ -29,7 +30,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="prose dark:prose-invert max-w-none text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             <p className="text-center text-2xl font-light mb-16">
-              ElectroCAD Engineering was founded with a clear purpose: to raise the standard of 
+              ElexCAD Engineering was founded with a clear purpose: to raise the standard of 
               electrical engineering documentation and design in East Africa.
             </p>
             
@@ -87,20 +88,46 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Technical Excellence", desc: "We maintain the highest standards of engineering accuracy and professionalism." },
-              { title: "Innovation", desc: "We embrace modern technologies and intelligent engineering solutions." },
-              { title: "Safety", desc: "We prioritize electrical safety and full compliance with international standards." },
-              { title: "Reliability", desc: "We deliver dependable services that our clients can trust." },
-              { title: "Integrity", desc: "We operate with honesty, transparency, and professional accountability." },
-              { title: "Client Satisfaction", desc: "We are committed to exceeding client expectations in every project." }
+              { 
+                title: "Technical Excellence", 
+                desc: "We maintain the highest standards of engineering accuracy and professionalism.",
+                icon: <Engineering sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              },
+              { 
+                title: "Innovation", 
+                desc: "We embrace modern technologies and intelligent engineering solutions.",
+                icon: <LightbulbOutlined sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              },
+              { 
+                title: "Safety", 
+                desc: "We prioritize electrical safety and full compliance with international standards.",
+                icon: <ShieldOutlined sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              },
+              { 
+                title: "Reliability", 
+                desc: "We deliver dependable services that our clients can trust.",
+                icon: <VerifiedUserOutlined sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              },
+              { 
+                title: "Integrity", 
+                desc: "We operate with honesty, transparency, and professional accountability.",
+                icon: <Gavel sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              },
+              { 
+                title: "Client Satisfaction", 
+                desc: "We are committed to exceeding client expectations in every project.",
+                icon: <HandshakeOutlined sx={{ fontSize: { xs: 36, sm: 42 } }} />
+              }
             ].map((value, i) => (
               <div 
                 key={i} 
                 className="group bg-white dark:bg-neutral-900 p-8 rounded-3xl border border-neutral-300 dark:border-neutral-800 hover:border-accent transition-all hover:shadow-xl"
               >
-                <div className="text-accent mb-5">
-                  <Users size={42} />
+                {/* Container for the dynamic MUI icon */}
+                <div className="text-accent mb-5 flex items-center">
+                  {value.icon}
                 </div>
+                
                 <h3 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-white group-hover:text-accent transition-colors">
                   {value.title}
                 </h3>

@@ -10,13 +10,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center text-black font-bold text-2xl">
-                E
-              </div>
-              <div>
-                <span className="font-bold text-2xl">ElectroCAD</span>
-                <p className="text-xs text-gray-400">ENGINEERING</p>
-              </div>
+              <img 
+                src="/full-logo-white.png" 
+                alt="EC" 
+                className="h-14 sm:h-16"
+              />
             </div>
             <p className="text-gray-400 leading-relaxed">
               Professional Electrical Design & Technical Documentation Solutions in Tanzania.
@@ -89,7 +87,7 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400">
               <p>Dar es Salaam, Tanzania</p>
               <p>+255 622 739 599</p>
-              <p>info@electrocad.co.tz</p>
+              <p>info@elexcad.co.tz</p>
             </div>
             
             <a 
@@ -103,7 +101,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-neutral-800 mt-16 pt-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} ElectroCAD Engineering. All Rights Reserved.
+          © {new Date().getFullYear()} ElexCAD Engineering. All Rights Reserved.
         </div>
       </div>
     </footer>

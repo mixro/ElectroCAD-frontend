@@ -13,6 +13,7 @@ import Works from './pages/works/Works'
 import ProjectDetail from './pages/projectDetails/ProjectDetails';
 import Services from './pages/services/Services';
 import ServiceDetail from './pages/serviceDetails/ServiceDetails';
+import NotFound from './pages/notFound/NotFound';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/eteam" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
 
           <Footer />
