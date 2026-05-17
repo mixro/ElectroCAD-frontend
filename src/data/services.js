@@ -105,7 +105,7 @@ export const servicesData = [
     title: "Engineering Consultancy",
     slug: "engineering-consultancy",
     shortDesc: "Site inspections, System analysis, Technical reports & Design review",
-    image: "https://capstone.co.in/wp-content/uploads/2021/03/1-800x480.jpg",
+    image: "https://mes-engineering.co.tz/assets/img/about.jpg",
     category: "Consultancy",
     description: "Expert electrical engineering consultancy services including site assessments, technical audits, and design reviews.",
     features: [
