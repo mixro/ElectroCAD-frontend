@@ -18,7 +18,7 @@ export default function Services() {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-neutral-200 dark:border-neutral-800 transition-all duration-500 hover:-translate-y-2"
+            className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-neutral-200 dark:border-neutral-300 dark:shadow-neutral-300 transition-all duration-500 hover:-translate-y-2"
           >
             <div className="relative h-64 overflow-hidden border-b border-neutral-300 dark:border-neutral-700">
               <Link 

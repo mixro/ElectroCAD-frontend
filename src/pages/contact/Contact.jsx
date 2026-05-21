@@ -55,7 +55,7 @@ export default function Contact() {
 
       <div className="grid lg:grid-cols-12 gap-12">
         {/* Contact Form */}
-        <div className="lg:col-span-7 bg-white dark:bg-neutral-900 rounded-3xl shadow-xl p-4 md:p-12">
+        <div className="lg:col-span-7 bg-white dark:bg-neutral-900 rounded-3xl shadow-xl dark:shadow-md p-4 md:p-12 dark:border-neutral-100 dark:shadow-neutral-300">
           <h2 className="text-2xl pt-4 sm:text-3xl font-semibold mb-8">Send Us a Message</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -154,7 +154,7 @@ export default function Contact() {
         {/* Contact Information */}
         <div className="lg:col-span-5 space-y-8">
           {/* Quick Contact */}
-          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-8 shadow-xl">
+          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-8 shadow-xl dark:shadow-md dark:border-neutral-700 dark:shadow-neutral-300">
             <h3 className="text-2xl font-semibold mb-8">Quick Contact</h3>
             
             <div className="space-y-6">
@@ -195,7 +195,7 @@ export default function Contact() {
           </div>
 
           {/* Office Information */}
-          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-8 shadow-xl">
+          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-8 shadow-xl dark:shadow-md dark:border-neutral-700 dark:shadow-neutral-300">
             <h3 className="text-2xl font-semibold mb-8">Info</h3>
             
             <div className="space-y-6">

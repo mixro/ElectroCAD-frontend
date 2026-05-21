@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
             <div
               key={i}
               className="group bg-white dark:bg-neutral-900 p-4 sm:p-8 rounded-3xl shadow-sm hover:shadow-xl 
-                         border border-neutral-100 dark:border-neutral-800 
+                         border border-neutral-100 dark:border-neutral-600 
                          transition-all duration-300 hover:-translate-y-2"
             >
               <div className="mb-6 text-yellow-dark dark:text-yellow transition-transform group-hover:scale-110 inline-block">

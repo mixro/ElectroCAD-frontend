@@ -4,7 +4,7 @@ import { servicesData } from "../../data/services";
 
 export default function Services() {
   return (
-    <section id="services-section" className="py-20 px-6 bg-neutral-50 dark:bg-neutral-950">
+    <section id="services-section" className="py-20 px-6 bg-neutral-50 dark:bg-[linear-gradient(120deg,#0b3157_10%,#05121F_90%)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -21,8 +21,8 @@ export default function Services() {
           {servicesData.map((service, index) => (
             <div
               key={index}
-              className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl 
-                         border border-neutral-300 dark:border-neutral-500 
+              className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-md hover:shadow-
+                         border border-neutral-400 dark:border-neutral-100 dark:shadow-neutral-200
                          transition-all duration-500 hover:-translate-y-3"
             >
               {/* Image Area */}

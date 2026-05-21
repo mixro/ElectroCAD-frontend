@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
             <div 
               key={i} 
               className="group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl 
-                         transition-all duration-500 hover:-translate-y-2 border border-neutral-300 dark:border-neutral-500"
+                         transition-all duration-500 hover:-translate-y-2 border border-neutral-300 dark:border-neutral-100 dark:shadow-neutral-200"
             >
               {/* Project Image */}
               <div className="relative h-56 overflow-hidden">

@@ -50,7 +50,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="group bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 
+              className="group bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-500 
                          rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 
                          hover:-translate-y-2 flex flex-col h-full"
             >

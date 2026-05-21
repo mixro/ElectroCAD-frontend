@@ -5,7 +5,7 @@ export default function Footer() {
   const defaultMessage = "Hello ElexCAD Engineering,%0A%0AI visited your website and I'm interested in your services.%0APlease assist me.";
 
   return (
-    <footer className="bg-neutral-950 text-white pt-16 pb-10">
+    <footer className="bg-neutral-950 text-white pt-16 pb-10 border-t dark:border-neutral-500">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-10">
           
